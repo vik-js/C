@@ -6,7 +6,11 @@ if (a > b)
 {
   Console.WriteLine($"a = {a}; b = {b} -> max = {a}");
 }
-else
+else if (b > a)
 {
   Console.WriteLine($"a = {a}; b = {b} -> max = {b}");
+}
+else 
+{
+  Console.WriteLine($"a = {a}; b = {b} -> числа равны");
 }
