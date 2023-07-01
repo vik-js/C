@@ -1,5 +1,5 @@
 ﻿Console.WriteLine("Введите номер дня недели:");
-string dayOfWeek = Console.ReadLine();
+string? dayOfWeek = Console.ReadLine();
 
 if (dayOfWeek == "1")
 {
