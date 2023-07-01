@@ -5,13 +5,13 @@
 Console.WriteLine("Введите номер четверти");
 int number = Convert.ToInt32(Console.ReadLine());
 
-string range = Range(number);
+string? range = Range(number);
 string result = range == null
             ? "Указана неверная четверть"
             : $"Диапазон возможных координат точек в этой четверти -> {range}";
 Console.WriteLine(result);
 
-string Range(int numb)
+string? Range(int numb)
 {
   if (numb == 1) return "x > 0, y > 0";
   if (numb == 2) return "x < 0, y > 0";
