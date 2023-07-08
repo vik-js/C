@@ -24,27 +24,27 @@ void PrintArrayDouble(double[] arr, string sep = ", ", int round = 2)
   }
 }
 
-double GetMinElem(double[] arr, int round = 2)
+double GetMinElem(double[] arr)
 {
   double minElem = arr[0];
   for (int i = 0; i < arr.Length; i++)
   {
     if (arr[i] < minElem)
     {
-      minElem = Math.Round(arr[i], round);
+      minElem = arr[i];
     }
   }
   return minElem;
 }
 
-double GetMaxElem(double[] arr, int round = 2)
+double GetMaxElem(double[] arr)
 {
   double maxElem = arr[0];
   for (int i = 0; i < arr.Length; i++)
   {
     if (arr[i] > maxElem)
     {
-      maxElem = Math.Round(arr[i], round);
+      maxElem = arr[i];
     }
   }
   return maxElem;
@@ -62,8 +62,8 @@ PrintArrayDouble(array);
 Console.Write("]");
 Console.WriteLine();
 
-double minElement = GetMinElem(array);
-double maxElement = GetMaxElem(array);
-double getDiffMaxMinElem = GetDiffMaxMinElem(maxElement, minElement);
+double minElement = Math.Round(GetMinElem(array), 2);
+double maxElement = Math.Round(GetMaxElem(array), 2);
+double getDiffMaxMinElem = Math.Round(GetDiffMaxMinElem(maxElement, minElement), 2);
 Console.Write($"Разница между макс и мин элементами => {maxElement} - {minElement} = {getDiffMaxMinElem}");
 Console.WriteLine();
