@@ -52,8 +52,15 @@ int columnJ = Convert.ToInt32(Console.ReadLine());
 
 int[,] array2d = CreateMatrixRndInt(5, 7, 1, 20);
 
-Console.WriteLine();
-PrintMatrix(array2d);
-Console.WriteLine();
+if (rowI <= 0 || columnJ <= 0)
+{
+  Console.WriteLine("Количество строк или столбоц не может быть отрицательным или нулевым!");
+}
+else
+{
+  Console.WriteLine();
+  PrintMatrix(array2d);
+  Console.WriteLine();
 
-PrintElemByIndex(array2d, rowI, columnJ);
+  PrintElemByIndex(array2d, rowI, columnJ);
+}
